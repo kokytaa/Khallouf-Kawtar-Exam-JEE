@@ -3,7 +3,7 @@ package org.sid.khalloufkawtarexamjee.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.sid.khalloufkawtarexamjee.enums.StatutContrat;
-import org.springframework.data.annotation.Id;
+
 
 import java.time.LocalDate;
 import java.util.List;
