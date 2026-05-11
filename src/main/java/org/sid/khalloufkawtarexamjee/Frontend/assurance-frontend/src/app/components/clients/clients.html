@@ -1,0 +1,15 @@
+<h2>Liste des clients</h2>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Email</th>
+  </tr>
+
+  <tr *ngFor="let c of clients">
+    <td>{{c.id}}</td>
+    <td>{{c.nom}}</td>
+    <td>{{c.email}}</td>
+  </tr>
+</table>

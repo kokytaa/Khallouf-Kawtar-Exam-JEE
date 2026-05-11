@@ -1,5 +1,6 @@
 package org.sid.khalloufkawtarexamjee.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +25,7 @@ public class Client {
     @Column(unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client" ,cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<ContratAssurance> contrats;
 }
